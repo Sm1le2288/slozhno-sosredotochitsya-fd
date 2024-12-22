@@ -3,22 +3,10 @@
   и их переопределение под различные устройства
 */
 :root {
-	--background-image-black: url(../images/cover-image-dark.png);
+	--btn-default-background: url(../images/cover-image-dark.png);
 	--accent-color:#FF0070;
 	--color-header:#DB00FF;
 	--color-text: rgba(255, 194, 230, 1);
 	--accent-text: #000028;
 	--color-rectengle:#FF0070;
-	--font-family: IBM Plex mono;
-	--font-size-18: 18px;
-	--font-size-116: 116px;
-	--line-height-23: 23.4px;
-	--line-height-95: 95.7px;
-	--line-height-130: 130px;
-	--font-weight-400: 400;
-	--font-weight-700: 700;
-	--line-height-18: 18px;
-	--margin-end-20: 20px;
-	--margin-end-10: 10px;
-	
 }
