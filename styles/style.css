@@ -14,7 +14,7 @@
   position: relative;
   color: var(--accent-color);
   font-family: IBM Plex mono ,sans-serif;
-  font-size:18px;
+  font-size:1,125rem;
   font-weight: 400;
   line-height: 18px;
   padding: 10px;
@@ -129,8 +129,8 @@
   line-height:23px;
   color: var(--accent-color);
   grid-row: 3;
-  max-width: 355px;
-  min-height: 117px;
+  max-width: 22.1875rem;
+  min-height: 7.3125rem;
   justify-self: center;
   align-self: center;
 }
@@ -141,7 +141,7 @@
 
 .content {
   font-family: var(--font-family, sans-serif);
-  font-size:18;
+  font-size:1.125rem;
   font-weight:400;
   line-height:23px;
   padding-inline-start: 10px;
@@ -175,12 +175,11 @@
   grid-row: 1;
 }
 .concentration__item-title {
-  font-size:18px;
+  
   margin-block-end: 10px;
 }
 .concentration__item-subtitle {
   color: var(--color-text);
-  font-size: 18;
   font-weight:400;
 }
 .attention {
