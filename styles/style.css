@@ -26,8 +26,10 @@
   grid-auto-rows: auto;
   grid-auto-columns: auto;
 }
-
-.header::before {
+.decorated-zone{
+  position: relative;
+}
+.decorated-zone:before {
   content: "";
   display: block;
   position: absolute;
@@ -38,7 +40,7 @@
   right: 10px;
   top: 10px;
 }
-.header::after {
+.decorated-zone:after {
   content: "";
   display: block;
   position: absolute;
@@ -57,6 +59,7 @@
   top: 13px;
   right: 20px;
   column-gap: 10px;
+  visibility:var(--visible);
 }
 .header__rec::after {
   content: "";
@@ -73,27 +76,30 @@
   align-self: center;
 }
 .header__theme-menu-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+	
 }
 .header__theme-menu-button {
-  background-color: transparent;
-  text-transform: lowercase;
-  padding-inline-start: 13px;
-  padding-inline-end: 13px;
-  padding-block-end: 3px;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
+	background-color: transparent;
+	text-transform: lowercase;
+	padding-inline-start: 13px;
+	padding-inline-end: 13px;
+	padding-block-end: 5px;
+	padding-block-start: 3px;
+	border: 0;
+  color: var(--color-rectengle);
 }
 .header__theme-menu-button_active {
-  pointer-events: none;
+	pointer-events: none;
+	border: 1px solid var(--color-rectengle);
 }
 
+
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color, 0.4);
+	border: 1px solid var(--color-rectengle);
 }
 
 .header__theme-menu-button:focus {
@@ -101,15 +107,8 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-right: 0;
-  border-left: 0;
-  border-top: 0;
-  border-bottom: 1px solid var(--accent-color);
-}
-.header__theme-menu-button {
-  background-color: transparent;
-  text-transform: lowercase;
-  border: 1px solid var(--color-button);
+	outline: none;
+	border-bottom: 1px solid var(--color-rectengle);
 }
 
 .header__title {
@@ -130,7 +129,6 @@
   color: var(--accent-color);
   grid-row: 3;
   max-width: 22.1875rem;
-  min-height: 7.3125rem;
   justify-self: center;
   align-self: center;
 }
@@ -204,27 +202,21 @@
   font-size:18px;
   font-weight: 400;
   color: var(--color-text);
-  padding-block-end:20px;
 }
 
 .content__link {
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
-  cursor: pointer;
 }
 
 .content__link:hover {
-  text-shadow: 2px 2px 0 var(--color-link);
-  text-decoration: underline;
-  cursor: pointer;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .content__link:focus {
-  text-shadow: 2px 2px 0 var(--color-link);
   padding-inline-start: 3px;
   padding-inline-end: 4px;
   border: 1px solid var(--color-button);
-  cursor: pointer;
 }
 
 .concentratation-better {
@@ -246,12 +238,14 @@
 }
 
 .concentratation-better__item-subtitle {
-  padding-block-end:20px;
   color: var(--color-text);
 }
 .pictures {
   padding-block-start: 30px;
   gap: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .pictures__images {
@@ -269,7 +263,7 @@
 }
 .footer {
   position: relative;
-  height: 100vh;
+  min-height: 668px;
   grid-template-columns: 1fr;
   grid-template-rows: 49%;
   align-items: center;
@@ -313,10 +307,6 @@
 }
 @media (width >= 768px) {
   .header {
-    position: relative;
-    padding: 0px;
-    height: 100vh;
-    min-width: 375px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -332,7 +322,6 @@
   .header__rec {
     top: 23px;
     right: 30px;
-    column-gap: 10px;
   }
   .header__theme-menu {
     grid-row: 1;
@@ -341,11 +330,6 @@
   .header__theme-menu-list {
     padding-block-end: 53px;
     padding-inline-end: 20px;
-  }
-  .header__theme-menu-button {
-    background-color: transparent;
-    text-transform: lowercase;
-    border: 1px solid var(--color-button);
   }
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -360,8 +344,6 @@
     margin-inline-end: 21px;
   }
   .content {
-    font-size:18px;
-    font-weight:400;
     line-height:23px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
@@ -381,7 +363,6 @@
     margin-inline-start: 10px;
   }
   .concentration__title {
-    color: var(--color-title);
     grid-row: 1;
     padding-inline-start: 10px;
     padding-block-start: 25px;
@@ -427,7 +408,6 @@
     margin-inline-end: 10px;
   }
   .concentratation-better__title-advice {
-    font-size: var(--font-size-18);
     margin-inline-start: 20px;
   }
   .concentratation-better__item-title {
@@ -491,7 +471,6 @@
     
   }
   .footer {
-    position: relative;
     height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 51%;
@@ -525,16 +504,8 @@
   }
 }
 @media (width >= 1024px) {
-  .header {
-    position: relative;
-    color: var(--accent-color, #ff0070);
-    font-family:IBM Plex mono , sans-serif;
-    line-height: var(--line-height-18);
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 12px;
+  .header{
+    max-height: 768px;
   }
   .header__theme-menu {
     grid-row: 1;
@@ -549,20 +520,9 @@
     padding-block-start: 21px;
     margin-inline-start: 20px;
   }
-  .header__theme-menu-button {
-    background-color: transparent;
-    text-transform: lowercase;
-    border: 1px solid var(--color-button);
-  }
   .header__title {
     font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
-    font-weight: 700;
     line-height: 130px;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    grid-row: 2;
   }
   .header__subtitle {
     font-weight: 700;
@@ -574,10 +534,6 @@
     align-self: flex-start;
   }
   .concentration {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-auto-rows: auto;
-    grid-auto-columns: auto;
     padding-left: 20px;
     padding-right: 20px;
     padding-inline-start: 0px;
@@ -635,14 +591,12 @@
   }
   .concentratation-better__title {
     padding-block-end: 20px;
-    color: var(--color-title);
     margin-block-start: 30px;
     margin-inline-start: 10px;
     width: 315px;
   }
   .pictures__title {
-    margin-block-end: 10px;
-    color: var(--accent-text);
+    margin-block-end: 0px;
   }
   .footer {
     position: relative;
