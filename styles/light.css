@@ -21,29 +21,6 @@
   --background-color-fallback: #fff1f7;
   --color-rectengle:#353430;
   --visible:hidden;
+  --color-link:#353430;
   
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-color: rgba(255, 141, 203);
-    --color-header: rgba(255, 194, 230);
-    --color-content: rgba(53, 52, 48);
-    --color-title: rgba(53, 52, 48);
-    --color-link: rgba(53, 52, 48);
-    --color-subtitle: rgba(53, 52, 48);
-    --button-hover: rgba(50, 49, 45, 0.4);
-    --color-text: rgba(50, 49, 45, 0.4);
-    --font-family: IBM Plex mono;
-    --background-image-black: url(../images/cover-image-light.png);
-    --background-color-fallback: #fff1f7;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .theme-auto .header__rec {
-    visibility: hidden;
-    
-    
-  }
 }
