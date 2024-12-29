@@ -24,3 +24,67 @@
   --color-link:#353430;
   
 }
+:root.theme-light {
+	/* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+	--accent-color: rgba(255, 141, 203);
+  --color-header: rgba(255, 194, 230);
+  --color-content: rgba(53, 52, 48);
+  --color-title: rgba(53, 52, 48);
+  --color-link: rgba(53, 52, 48);
+  --color-subtitle: rgba(53, 52, 48);
+  --button-hover: rgba(50, 49, 45, 0.4);
+  --color-text: #353430;
+  --font-family: IBM Plex mono;
+  --background-image-black: url(../images/cover-image-light.png);
+  --background-color-fallback: #fff1f7;
+  --color-rectengle:#353430;
+  --visible:hidden;
+  --color-link:#353430;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--accent-color: rgba(255, 141, 203);
+  --color-header: rgba(255, 194, 230);
+  --color-content: rgba(53, 52, 48);
+  --color-title: rgba(53, 52, 48);
+  --color-link: rgba(53, 52, 48);
+  --color-subtitle: rgba(53, 52, 48);
+  --button-hover: rgba(50, 49, 45, 0.4);
+  --color-text: #353430;
+  --font-family: IBM Plex mono;
+  --background-image-black: url(../images/cover-image-light.png);
+  --background-color-fallback: #fff1f7;
+  --color-rectengle:#353430;
+  --visible:hidden;
+  --color-link:#353430;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root.theme-dark {
+		--btn-default-background: url(../images/cover-image-dark.png);
+	--accent-color:#FF0070;
+	--color-header:#DB00FF;
+	--color-text: rgba(255, 194, 230, 1);
+	--accent-text: #000028;
+	--color-rectengle:#FF0070;
+	--color-title:#FF0070;
+	--visible:visible;
+	--color-link:#fff;
+
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.theme-auto .header__rec {
+		visibility: hidden;
+	}
+}
+
+.theme-light .header__rec {
+	visibility: hidden;
+}
